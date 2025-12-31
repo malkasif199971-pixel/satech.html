@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SA Tech</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+    body {
+      background: linear-gradient(rgba(0,40,90,0.6), rgba(0,40,90,0.7)),
+                  url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00c6ff, #ff9900);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      font-size: 24px;
+      margin-right: 12px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text .sa {
+      font-size: 26px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #00c6ff, #ff9900);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-text .tech {
+      font-size: 16px;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #ff7f50, #ffdd00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 15px;
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: linear-gradient(90deg, #00ffcc, #0099ff);
+      color: #002244;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .center-logo .sa {
+      font-size: 70px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #00c6ff, #ff9900);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 5px;
+    }
+    .center-logo .tech {
+      font-size: 24px;
+      letter-spacing: 7px;
+      background: linear-gradient(135deg, #ff7f50, #ffdd00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section {
+      padding: 80px 40px;
+      background: rgba(0, 70, 140, 0.55);
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 15px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #00ccff, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p { max-width: 750px; line-height: 1.7; margin: auto; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .service-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.35);
+      transition: 0.3s;
+    }
+    .service-box:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+    }
+
+    /* IMAGE BELOW SERVICES */
+    .services-image {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .services-image img {
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      background: rgba(0,0,0,0.65);
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: linear-gradient(90deg, #00ffcc, #0099ff);
+      color: #002244;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">SA</div>
+    <div class="logo-text">
+      <div class="sa">SA</div>
+      <div class="tech">TECH</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div id="home" class="hero">
+  <div class="center-logo">
+    <div class="sa">SA</div>
+    <div class="tech">TECH</div>
+  </div>
+  <h1>Creative & Smart Digital Solutions</h1>
+  <p>SA Tech transforms your ideas into modern, powerful, and professional digital solutions.</p>
+  <a href="#contact" class="button">Get in Touch</a>
+</div>
+
+<section id="about">
+  <h2>About SA Tech</h2>
+  <p>SA Tech is a modern and creative technology agency focused on delivering high-quality digital solutions.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="service-box">
+      <h3>Website Development</h3>
+      <p>We build fast, responsive, and modern websites.</p>
+    </div>
+    <div class="service-box">
+      <h3>Logo Design</h3>
+      <p>Creative and professional logo designs.</p>
+    </div>
+    <div class="service-box">
+      <h3>Gig Design</h3>
+      <p>High-converting Fiverr gig designs.</p>
+    </div>
+    <div class="service-box">
+      <h3>Digital Setup</h3>
+      <p>Complete digital business setup.</p>
+    </div>
+  </div>
+
+  
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p style="margin-top:20px; font-size:18px;">
+    📧 <strong>Email:</strong> malk.asif199971@gmail.com<br><br>
+    📞 <strong>Phone:</strong> +92 308 6744246
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 SA Tech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+ 
